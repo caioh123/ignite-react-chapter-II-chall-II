@@ -1,16 +1,13 @@
-import { Component } from 'react';
+import { useState, useEffect } from 'react';
 import ReactModal from 'react-modal';
 
-class Modal extends Component {
-  constructor(props) {
-    super(props);
+const Modal = ({isOpen, children, setIsOpen}) => {
+  const [modalStatus, setModalStatus] = useState(isOpen)
 
-    const { isOpen } = this.props;
-    this.state = {
-      modalStatus: isOpen
-    }
-  }
 
+  useEffect(()=> {
+    
+  }, [])
   componentDidUpdate(prevProps) {
     const { isOpen } = this.props;
 
